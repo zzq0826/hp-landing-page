@@ -119,7 +119,7 @@ export function Home() {
                 <h2 className="text-3xl font-bold sm:text-4xl">Why Choose USX?</h2>
                 <p className="mt-4 text-lg text-gray-400">The next generation of yield-bearing stablecoins</p>
               </div>
-              <div className="mt-12 grid gap-8 md:grid-cols-3 px-20">
+              <div className="mt-12 grid gap-8 md:grid-cols-3 px-24">
                 <Feature
                   icon={<img src="/icons/shield.svg" alt="shield icon" className="h-12 w-12 text-white" />}
                   title="Fully Overcollateralized"
