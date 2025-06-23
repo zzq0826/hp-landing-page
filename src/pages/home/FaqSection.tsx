@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const FaqItem = ({
   question,
@@ -57,26 +58,57 @@ const faqs = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: -20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 const FaqSection = () => (
   <section className="py-20">
     <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
       <div className="text-center">
-        <h2 className="text-3xl font-bold sm:text-4xl">
+        <motion.h2
+          className="text-3xl font-bold sm:text-4xl"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           Frequently Asked Questions
-        </h2>
-        <p className="mt-4 text-lg text-gray-400 font-medium">
+        </motion.h2>
+        <motion.p
+          className="mt-4 text-lg font-medium text-gray-400"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           Everything you need to know about USX
-        </p>
+        </motion.p>
       </div>
-      <div className="mt-12">
+      <motion.div
+        className="mt-12"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {faqs.map((faq) => (
-          <FaqItem
-            key={faq.question}
-            question={faq.question}
-            answer={faq.answer}
-          />
+          <motion.div key={faq.question} variants={itemVariants}>
+            <FaqItem question={faq.question} answer={faq.answer} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   </section>
 );

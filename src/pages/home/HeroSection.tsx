@@ -1,16 +1,22 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const assets = ["WBTC", "ETH", "USDT", "USDC", "DAI"];
 
 const HeroSection = () => (
   <section className="py-20 text-center">
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.div
+      className="container mx-auto px-4 sm:px-6 lg:px-8"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+    >
       <h1 className="text-3xl font-bold leading-tight sm:text-5xl md:text-6xl">
         USX: Stable by Design,
         <br />
         Growing by Strategy
       </h1>
-      <p className="mx-auto mt-9 max-w-4xl text-lg text-gray-400 font-medium">
+      <p className="mx-auto mt-9 max-w-4xl text-lg font-medium text-gray-400">
         Deposit BTC, ETH, USDT, USDC, and more to mint USX — a fully
         overcollateralized, yield-bearing stablecoin. Backed by both DeFi
         strategies and a real-world hedge fund, USX combines stability with
@@ -55,7 +61,7 @@ const HeroSection = () => (
           </form>
         </div>
       </div>
-    </div>
+    </motion.div>
   </section>
 );
 
