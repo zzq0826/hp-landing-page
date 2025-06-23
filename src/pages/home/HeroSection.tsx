@@ -7,7 +7,7 @@ const HeroSection = () => (
   <section className="py-20 text-center">
     <motion.div
       className="container mx-auto px-4 sm:px-6 lg:px-8"
-      initial={{ opacity: 0, y: -20 }}
+      initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
