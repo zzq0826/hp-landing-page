@@ -9,7 +9,7 @@ const Feature = ({
   title: string;
   description: string;
 }) => (
-  <div className="rounded-lg bg-gray-800 bg-opacity-50 p-6 text-center">
+  <div className="rounded-lg bg-gray-800 bg-opacity-50 p-6 text-center border-gray-700 border">
     <div className="mb-4 flex justify-center">{icon}</div>
     <h3 className="mb-2 text-xl font-bold">{title}</h3>
     <p className="text-gray-400">{description}</p>
