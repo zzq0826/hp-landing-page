@@ -22,35 +22,38 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.3,
     },
   },
 };
 
 const itemVariants = {
-  hidden: { y: -20, opacity: 0 },
+  hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
   },
 };
 
 const WhyChooseUsxSection = () => (
   <section className="py-20">
-    <div className="container mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+    <motion.div
+      className="container mx-auto max-w-8xl px-4 sm:px-6 lg:px-8"
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="text-center">
-        <motion.h2
-          className="text-3xl font-bold sm:text-4xl"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Why Choose USX?
-        </motion.h2>
+        <h2 className="text-3xl font-bold sm:text-4xl">Why Choose USX?</h2>
         <motion.p
           className="mt-4 text-lg font-medium text-gray-400"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           The next generation of yield-bearing stablecoins
@@ -60,7 +63,8 @@ const WhyChooseUsxSection = () => (
         className="mt-12 grid gap-8 md:grid-cols-3 md:px-24"
         variants={containerVariants}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true }}
       >
         <motion.div variants={itemVariants}>
           <Feature
@@ -102,7 +106,7 @@ const WhyChooseUsxSection = () => (
           />
         </motion.div>
       </motion.div>
-    </div>
+    </motion.div>
   </section>
 );
 

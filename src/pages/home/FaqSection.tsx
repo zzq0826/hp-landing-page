@@ -78,38 +78,31 @@ const itemVariants = {
 
 const FaqSection = () => (
   <section className="py-20">
-    <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <motion.div
+      className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8"
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="text-center">
-        <motion.h2
-          className="text-3xl font-bold sm:text-4xl"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
+        <h2 className="text-3xl font-bold sm:text-4xl">
           Frequently Asked Questions
-        </motion.h2>
-        <motion.p
-          className="mt-4 text-lg font-medium text-gray-400"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
+        </h2>
+        <p className="mt-4 text-lg font-medium text-gray-400">
           Everything you need to know about USX
-        </motion.p>
+        </p>
       </div>
-      <motion.div
-        className="mt-12"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
+      <div className="mt-12">
         {faqs.map((faq) => (
-          <motion.div key={faq.question} variants={itemVariants}>
-            <FaqItem question={faq.question} answer={faq.answer} />
-          </motion.div>
+          <FaqItem
+            key={faq.question}
+            question={faq.question}
+            answer={faq.answer}
+          />
         ))}
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   </section>
 );
 
