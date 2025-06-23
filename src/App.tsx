@@ -1,5 +1,5 @@
 import { LoadingOrError } from "components/LoadingOrError";
-import { Home } from "pages/Home";
+import { Home } from "pages/home";
 import { Suspense } from "react";
 import { ErrorBoundary, type FallbackProps } from "react-error-boundary";
 import { Route, Routes } from "react-router";
