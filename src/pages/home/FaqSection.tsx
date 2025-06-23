@@ -10,7 +10,7 @@ const FaqItem = ({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-700 py-4">
+    <div className="border-b border-gray-700  rounded mb-4 p-4 bg-gray-800 bg-opacity-50">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex w-full items-center justify-between text-left"
