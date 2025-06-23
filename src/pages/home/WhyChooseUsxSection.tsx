@@ -25,7 +25,7 @@ const WhyChooseUsxSection = () => (
           The next generation of yield-bearing stablecoins
         </p>
       </div>
-      <div className="mt-12 grid gap-8 md:grid-cols-3 px-24">
+      <div className="mt-12 grid gap-8 md:grid-cols-3 md:px-24">
         <Feature
           icon={
             <img

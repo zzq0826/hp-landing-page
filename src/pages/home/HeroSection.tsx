@@ -5,7 +5,7 @@ const assets = ["WBTC", "ETH", "USDT", "USDC", "DAI"];
 const HeroSection = () => (
   <section className="py-20 text-center">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
+      <h1 className="text-3xl font-bold leading-tight sm:text-5xl md:text-6xl">
         USX: Stable by Design,
         <br />
         Growing by Strategy
