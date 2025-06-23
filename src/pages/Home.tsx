@@ -103,7 +103,7 @@ export function Home() {
                 <br />
                 Growing by Strategy
               </h1>
-              <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400">
+              <p className="mx-auto mt-6 max-w-4xl text-lg text-gray-400">
                 Deposit BTC, ETH, USDT, USDC, and more to mint USX — a fully
                 overcollateralized, yield-bearing stablecoin. Backed by both
                 DeFi strategies and a real-world hedge fund, USX combines
@@ -205,7 +205,7 @@ export function Home() {
 
           {/* FAQ Section */}
           <section className="py-20">
-            <div className="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+            <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
               <div className="text-center">
                 <h2 className="text-3xl font-bold sm:text-4xl">
                   Frequently Asked Questions
