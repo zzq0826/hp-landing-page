@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const assets = ["WBTC", "ETH", "USDT", "USDC", "DAI"];
 
 const HeroSection = () => (
-  <section className="py-20 text-center">
+  <section className="py-12 md:py-20 text-center">
     <motion.div
       className="container mx-auto px-4 sm:px-6 lg:px-8"
       initial={{ opacity: 0, y: 100 }}

@@ -39,7 +39,7 @@ const itemVariants = {
 };
 
 const WhyChooseUsxSection = () => (
-  <section className="py-20">
+  <section className="py-12 md:py-20">
     <motion.div
       className="container mx-auto max-w-8xl px-4 sm:px-6 lg:px-8"
       initial={{ opacity: 0, y: 100 }}
