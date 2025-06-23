@@ -21,7 +21,7 @@ const WhyChooseUsxSection = () => (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center">
         <h2 className="text-3xl font-bold sm:text-4xl">Why Choose USX?</h2>
-        <p className="mt-4 text-lg text-gray-400">
+        <p className="mt-4 text-lg text-gray-400 font-medium">
           The next generation of yield-bearing stablecoins
         </p>
       </div>

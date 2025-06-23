@@ -10,13 +10,13 @@ const HeroSection = () => (
         <br />
         Growing by Strategy
       </h1>
-      <p className="mx-auto mt-9 max-w-4xl text-lg text-gray-400">
+      <p className="mx-auto mt-9 max-w-4xl text-lg text-gray-400 font-medium">
         Deposit BTC, ETH, USDT, USDC, and more to mint USX — a fully
         overcollateralized, yield-bearing stablecoin. Backed by both DeFi
         strategies and a real-world hedge fund, USX combines stability with
         sustainable growth.
       </p>
-      <div className="mt-9 flex items-center justify-center space-x-4">
+      <div className="mt-9 flex items-center justify-center space-x-8">
         {assets.map((asset) => (
           <div key={asset} className="flex flex-col items-center space-y-2">
             {/* Placeholder for asset icon */}
@@ -31,7 +31,7 @@ const HeroSection = () => (
       </div>
       <div className="mt-12">
         <div className="mx-auto max-w-md rounded-lg bg-gray-800 bg-opacity-50 p-6">
-          <h3 className="text-xl font-bold">Join the Waitlist</h3>
+          <h3 className="text-2xl font-bold">Join the Waitlist</h3>
           <p className="mt-2 text-gray-400">
             Join the waitlist now. First come first serve.
           </p>

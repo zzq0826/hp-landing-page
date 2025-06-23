@@ -64,7 +64,7 @@ const FaqSection = () => (
         <h2 className="text-3xl font-bold sm:text-4xl">
           Frequently Asked Questions
         </h2>
-        <p className="mt-4 text-lg text-gray-400">
+        <p className="mt-4 text-lg text-gray-400 font-medium">
           Everything you need to know about USX
         </p>
       </div>
