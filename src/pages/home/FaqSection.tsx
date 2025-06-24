@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 const FaqItem = ({
@@ -34,47 +34,29 @@ const faqs = [
   {
     question: "What is USX and how does it work?",
     answer:
-      "USX is a yield-bearing stablecoin. This is a placeholder answer. Please replace it with the actual content.",
+      "USX is a decentralized stablecoin designed to be both secure and yield-bearing. You can mint USX by depositing supported collateral such as ETH, wBTC, USDC, or USDT. Once minted, your USX is automatically staked to earn yield—giving you a stablecoin that puts your capital to work. Collateral management, staking, and liquidations are all handled on-chain through smart contracts, with no banks or intermediaries involved.",
   },
   {
-    question: "How is the 9.2% yield generated?",
+    question: "How is the 9~20% yield generated?",
     answer:
-      "This is a placeholder answer. Please replace it with the actual content.",
+      "Yield is generated through a professionally managed strategy run by a hedge fund. Collateral is deployed into a diversified mix of market-neutral trading, low-risk lending, and liquidity provisioning. All strategies are risk-controlled and actively monitored, with a target APY ranging from 9% to 20% depending on market conditions. Your yield accrues automatically and is reflected in your staked USX balance.",
   },
   {
-    question: "What assets can I deposit to mint USX?",
+    question: "What assets can I use to mint USX?",
     answer:
-      "This is a placeholder answer. Please replace it with the actual content.",
+      "You can currently mint USX by depositing ETH, wBTC, USDC, or USDT. The protocol applies different collateralization ratios based on asset type—for example, stablecoins like USDC are accepted at a 1:1 ratio, while more volatile assets like ETH require higher collateral margins.",
   },
   {
     question: "Is USX safe and audited?",
     answer:
-      "This is a placeholder answer. Please replace it with the actual content.",
+      "Yes—security is foundational to USX. All smart contracts have been formally verified and audited by top-tier firms such as [Audit Firm A] and [Audit Firm B]. The protocol also features robust oracle protections, circuit breakers, and a dedicated insurance fund to protect user funds. Transparency and resilience are core to our design—we believe trust must be earned.",
   },
   {
     question: "When will USX be available?",
     answer:
-      "This is a placeholder answer. Please replace it with the actual content.",
+      "USX is scheduled to launch in Q3 2025. We’re currently finalizing integrations and conducting closed testing with ecosystem partners. To get updates or request early access, visit our homepage or follow us on social media.",
   },
 ];
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { y: -20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
 
 const FaqSection = () => (
   <section className="py-12 md:py-20">
